@@ -9,22 +9,65 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Question 3
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
+#Original:
+team_A <-2
+team_B <- 2
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+if (team_A > team_B){
+  print ("Team A won")
+} else if (team_A < team_B) {
+  print ("Team B won")
+}else {
+  print("Team A and B tied")
+}
 
-```{r cars}
-summary(cars)
+#Adjusted to show "Team A won":
+team_A <-3
+team_B <- 2
+
+if (team_A > team_B){
+  print ("Team A won")
+} else if (team_A < team_B) {
+  print ("Team B won")
+}else {
+  print("Team A and B tied")
+}
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+# Question 4
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+## creating function
+```{r}
+num_sort <- function(val) {
+if ((val %% 3) == 0) {
+  if (val %% 5 == 0) {
+    print ("divisible by Three and Five")
+  } else if (val %% 4 == 0) {
+    print ("divisible by Three and Four")
+  } else {
+      print ("neither")
+    }
+} else {
+  print("neither")
+}
+}
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## when val is 16
+```{r}
+num_sort(16)
+```
+## when val is 45
+```{r}
+num_sort(45)
+```
+
+## when val is 24
+```{r}
+num_sort(24)
+```
