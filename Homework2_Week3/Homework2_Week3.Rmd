@@ -1,6 +1,6 @@
 ---
 title: "HomeWork2_Week3"
-author: "Emmenta Janneh"
+authors: "Emmenta Janneh, Miles Matthews, and Alphonoso Saiewane"
 date: "2024-02-04"
 output: html_document
 ---
@@ -70,4 +70,24 @@ num_sort(45)
 ## when val is 24
 ```{r}
 num_sort(24)
+```
+
+
+# Question 5
+
+## Creating modified mpg data table
+```{r}
+mpg2 <- mpg |>
+  select(displ, cyl, cty, hwy)
+mpg2
+```
+
+## Finding variances
+
+```{r}
+mpg_vars <- vector("double", ncol(mpg2))
+for (i in seq_along(mpg2)) {
+  mpg_vars[[i]] <- var(mpg2[[i]])
+}
+mpg_vars
 ```
