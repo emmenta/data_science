@@ -70,3 +70,9 @@ for (i in seq_along(mpg2)) {
 }
 mpg_vars
 ```
+
+# Question 6
+
+for (num in c(11, 13)) {
+  print(num^3 - num^2)
+}
