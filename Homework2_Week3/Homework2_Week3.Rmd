@@ -4,6 +4,9 @@ authors: "Emmenta Janneh, Miles Matthews, and Alphonoso Saiewane"
 date: "2024-02-04"
 output: html_document
 ---
+Webpage for prime number formula:
+https://www.vedantu.com/maths/how-to-find-prime-numbers
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
