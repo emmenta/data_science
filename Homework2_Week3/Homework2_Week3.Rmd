@@ -1,12 +1,9 @@
 ---
-title: "HomeWork2_Week3"
-authors: "Emmenta Janneh, Miles Matthews, and Alphonoso Saiewane"
+title: "Emmenta Janneh, Miles Matthews, and Alphonoso Saiewane"
+authors: "HomeWork2_Week3"
 date: "2024-02-04"
 output: html_document
 ---
-Webpage for prime number formula:
-https://www.vedantu.com/maths/how-to-find-prime-numbers
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -74,32 +71,8 @@ for (i in seq_along(mpg2)) {
 mpg_vars
 ```
 
+
 # Question 6
-
-is_prime <- function(n) {
-  if (n <= 1) return(FALSE)
-  if (n == 2) return(TRUE)
-  if (any(n %% 2:(floor(sqrt(n))) == 0)) return(FALSE)
-  return(TRUE)
-}
- 
-# Initialize a vector to store the results
-results <- numeric(0)
- 
-# Iterate through prime numbers between 10 and 30
-for (i in 10:30) {
-  if (is_prime(i)) {
-    # Calculate the difference between cube and square
-    result <- i^3 - i^2
-    # Append result to the vector
-    results <- c(results, result)
-  }
-}
- 
-# Print the results
-print(results)
-
-
 
 ```{r}
 # Function to check if a number is prime
@@ -109,6 +82,8 @@ is_prime <- function(n) {
   if (any(n %% 2:(floor(sqrt(n))) == 0)) return(FALSE)
   return(TRUE)
 }
+
+results <- numeric(0)
 
 AME <- function(x,y){
   for (i in seq(x,y)) {
