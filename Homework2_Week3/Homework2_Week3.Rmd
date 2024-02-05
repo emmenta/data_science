@@ -123,3 +123,4 @@ AME <- function(x,y){
 
 AME(10,30)
 ```
+
