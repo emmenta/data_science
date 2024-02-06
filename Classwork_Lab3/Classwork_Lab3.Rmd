@@ -69,3 +69,9 @@ tribble( ~x, ~y, ~w, ~z,
 ```{r}
 
 ```
+
+#### Question 9b
+```{r}
+map_dbl(dt, sd)
+```
+
