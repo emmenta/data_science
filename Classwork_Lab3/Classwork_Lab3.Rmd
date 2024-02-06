@@ -49,3 +49,10 @@ K[[4]]
 ```
 
 ### Question 8
+```{r}
+K[]
+```
+
+### Question 9
+
+#### Question 9a
