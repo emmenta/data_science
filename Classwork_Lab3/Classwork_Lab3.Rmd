@@ -67,7 +67,7 @@ tribble( ~x, ~y, ~w, ~z,
 
 #### Question 9a
 ```{r}
-
+map_dbl(dt, mean)
 ```
 
 #### Question 9b
@@ -75,3 +75,12 @@ tribble( ~x, ~y, ~w, ~z,
 map_dbl(dt, sd)
 ```
 
+#### Question 9c
+```{r}
+map(dt, sqrt)
+```
+
+#### Question 9d
+```{r}
+summary(dt)
+```
