@@ -1,0 +1,51 @@
+---
+title: "Classwork_Lab3"
+author: "Group I (Alphonso Saiewane, Miles Matthews, and Emmenta Janneh)"
+date: "2024-02-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+V <- c("Bears", "Lions", "Dolphins", "Eagles", "Bengals")
+```
+
+### Question 1
+The above vector V is an atomic vector because it has all values of similar datatype - *character*. Atomic vectors contains objects of the same type.
+
+### Question 2
+```{r}
+V[3]
+```
+
+### Question 3
+```{r}
+V[c(1,3,5)]
+```
+
+### Question 4
+```{r}
+V[-1]
+```
+
+### Question 5
+```{r}
+K <- list(x = 3:7, "never", 43, y = list(10,20,30))
+```
+The vector above is called a list because it contains objects of different types. Lists in R are vectors that contains a list of objects with different datatypes.
+
+### Question 6
+```{r}
+length(K)
+```
+
+### Question 7
+```{r}
+K[[4]]
+```
+
+### Question 8
