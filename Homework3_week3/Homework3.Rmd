@@ -28,7 +28,7 @@ Vector1[c(1,12)]
 
 #### Method 2:
 ```{r}
-str(Vector1[c(1,12)])
+Vector1[seq(-2,-11)]
 ```
 
 
@@ -49,17 +49,16 @@ Vector1[Vector1 %% 60 == Vector1]
 
 #### Method 1
 ```{r}
-Vector1[Vector1 %% 2 != 0 & Vector1 %% 3 != 0]
+Vector1[Vector1 %% 2 != 0 | Vector1 %% 3 != 0]
 ```
 
 #### Method 2
 ```{r}
-Vector1[Vector1 %% 2 > 0 & Vector1 %% 3 > 0]
+Vector1[!(Vector1 %% 2 == 0 & Vector1 %% 3 == 0)]
 ```
 
 
-
-4)  Use and show two R coding methods to confirm that Vector1 does not have missing values
+### Question 4
 
 
 ```{r}
@@ -87,27 +86,19 @@ no_missing_values <- all(!is.na(Vector1))
 print(no_missing_values)
 ```
 
-5) For the list given above, use and show R coding to confirm that “pear” is a character element.
+### Question 5
 
 ```{r}
-# Define the list
 myList <- list(TRUE, 12.35, "pear", 48, c = 3:8, list(23, "team"))
-
-# Check if "pear" is a character element
-is_character <- typeof(myList[[3]]) == "character"
-print(is_character)
+typeof(myList[[3]])
 ```
+
 
 6) For the list given above, use and show R coding to extract the first three elements of the list.
 
 
 ```{r}
-# Define the list
-myList <- list(TRUE, 12.35, "pear", 48, c(3:8), list(23, "team"))
-
-# Extract the first three elements
-first_three <- myList[1:3]
-print(first_three)
+myList[1:3]
 ```
 
 
