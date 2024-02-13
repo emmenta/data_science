@@ -1,0 +1,48 @@
+---
+title: "Datahw4"
+author: "Miles Matthews"
+date: "2024-02-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+# Question 1
+
+## Part a
+```{r}
+nrow(iris)
+```
+
+## Part b (1)
+```{r}
+sepal_size <- map2_dbl(iris$Sepal.Length, iris$Sepal.Width, ~ .x * .y)
+nrow(as_tibble(sepal_size))
+```
+
+## Part b (2)
+```{r}
+iris_cleaned <- iris%>%
+  select(Sepal.Length)
+
+x <- map_dbl(iris_cleaned$Sepal.Length, num)
+nrow(as_tibble(x))
+```
+
+# Question 2
+
+```{r}
+output <- tibble()
+for (i in c(1:5)) {
+  for (i in c(1:3)){
+    output[[i]] <- print(i)
+  }
+}
+```
+
