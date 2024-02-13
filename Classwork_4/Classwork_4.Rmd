@@ -1,0 +1,47 @@
+---
+title: "Lab4"
+author: "Alphonso Saiewane, Emmenta Janneh, Miles Matthews"
+date: "2024-02-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+
+# Question 1
+
+```{r}
+x <- list(2, 4, 5, 9, 1)
+y <- list(8, 7, 2, 8, 3)
+z <- list(1, 8, 5, 4, 2)
+```
+
+```{r}
+pmap_dbl(list(x, y, z), function (x, y, z) (x + y + z)^2)
+```
+
+# Question 2
+
+```{r}
+tribble( ~Student, ~Gender, ~Salary,
+"John", "Male", 65000,
+"Alice", "Female", 73000,
+"Juan", "Male", 66000,
+"Beth", "Female", 71500,
+"Denise", "Female", 82000
+) -> table
+table
+```
+```{r}
+table %>%
+  pmap_chr(~str_glue("{..1} who is {..2}, has a salary that is {..3} dollars per year."))
+```
+
+
+

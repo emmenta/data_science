@@ -1,0 +1,14 @@
+---
+title: "Lab4"
+author: "Miles Matthews"
+date: "2024-02-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1
+
+
