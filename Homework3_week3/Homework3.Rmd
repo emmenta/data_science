@@ -62,28 +62,12 @@ Vector1[!(Vector1 %% 2 == 0 & Vector1 %% 3 == 0)]
 
 
 ```{r}
-# Define the list
-myList <- list(TRUE, 12.35, "pear", 48, c = 3:8, list(23, "team"))
-
-# Extract Vector1 from the list
-Vector1 <- unlist(myList)
-
-# Check for missing values in Vector1 using anyNA()
-missing_values <- anyNA(Vector1)
-print(!missing_values)
+Vector1[is.na(Vector1)]
 ```
 
 
 ```{r}
-# Define the list
-myList <- list(TRUE, 12.35, "pear", 48, c = 3:8, list(23, "team"))
-
-# Extract Vector1 from the list
-Vector1 <- unlist(myList)
-
-# Check if Vector1 has any missing values
-no_missing_values <- all(!is.na(Vector1))
-print(no_missing_values)
+length(Vector1) - length(Vector1[!is.na(Vector1)])
 ```
 
 ### Question 5
