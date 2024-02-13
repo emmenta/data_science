@@ -43,5 +43,24 @@ table %>%
   pmap_chr(~str_glue("{..1} who is {..2}, has a salary that is {..3} dollars per year."))
 ```
 
+# Question 3
+```{r}
+fivebyfive <- matrix(nrow = 5, ncol = 5)
+for(i in 1:nrow(fivebyfive)){
+  for(j in 1:ncol(fivebyfive)){
+    fivebyfive[i,j] <- i+j
+  }
+}
+fivebyfive
+```
 
+# Question 4
+```{r}
+for(i in 1:20){
+  if(i == 5 | i == 10){
+    next
+  }
+  print(i)
+}
+```
 
