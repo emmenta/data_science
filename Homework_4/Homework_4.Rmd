@@ -9,3 +9,28 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+library(tidyverse)
+```
+
+# Question 1
+
+## Part a
+```{r}
+nrow(iris)
+```
+
+## Part b (1)
+```{r}
+sepal_size <- map2_dbl(iris$Sepal.Length, iris$Sepal.Width, ~ .x * .y)
+nrow(as_tibble(sepal_size))
+```
+
+## Part b (2)
+```{r}
+iris_cleaned <- iris%>%
+  select(Sepal.Length)
+
+x <- map_dbl(iris_cleaned$Sepal.Length, num)
+nrow(as_tibble(x))
+```
