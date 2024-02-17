@@ -34,3 +34,38 @@ iris_cleaned <- iris%>%
 x <- map_dbl(iris_cleaned$Sepal.Length, num)
 nrow(as_tibble(x))
 ```
+
+# Question 3
+
+First tibble:
+
+```{r}
+rnorms_list <- list(negative_10 = c(rnorm(n = 10, mean = -10)),
+                  zero = c(rnorm(n = 10, mean = 0)),
+                  ten = c(rnorm(n = 10, mean = 10)),
+                  hundred = c(rnorm(n = 10, mean = 100))
+)
+
+
+rnorms_tibble <- as_tibble(rnorms_list)
+View(rnorms_tibble)
+```
+
+Second tibble:
+
+```{r}
+rnorms_list <- list(negative_10 = c(rnorm(n = 10, mean = -10)),
+                  zero = c(rnorm(n = 10, mean = 0)),
+                  ten = c(rnorm(n = 10, mean = 10)),
+                  hundred = c(rnorm(n = 10, mean = 100))
+)
+
+
+rnorms_tibble <- as_tibble(rnorms_list)
+View(rnorms_tibble)
+```
+
+
+Credit to https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/ for reference. 
+
+
