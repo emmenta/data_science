@@ -41,7 +41,8 @@ sub_mat
 ```
 
 
-# Question 3 ^ ![ https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/](https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/)
+# Question 3 
+![https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/](https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/)
 
 First tibble:
 
