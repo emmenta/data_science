@@ -25,12 +25,9 @@ iris %>%
 
 ## Question 1b
 ```{r}
-#map(iris, unique)
-
-iris %>% 
-  unique() |> 
-  map(~., nrow)
+map_int(iris, ~length(unique(.)))
 ```
+
 
 # Question 2
 ```{r}
@@ -44,7 +41,7 @@ sub_mat
 ```
 
 
-# Question 3
+# Question 3 ^ ![ https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/](https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/)
 
 First tibble:
 
@@ -80,12 +77,12 @@ X <- list(12, 14, 15, 18, 19, 22,10,18,18)
 Mean <- list(16, 16, 16, 16, 16,16,16,16,16)
 sd <- list(2, 2, 2, 2, 2,2,2,2,2)
 
-pmap_dbl(list(X,Mean,sd), function(x,y,z)((x - y) / z))
+pmap_dbl(list(X,Mean,sd), function(x,mean,sd)((x - mean) / sd))
 ```
 
-# Question 4b
+# Question 4b 
 ```{r}
-pmap_dbl(list(X, Mean, sd), function(x,y,z)(((x-y)/z)/sqrt(length(X))))
+pmap_dbl(list(X, Mean, sd), function(x,mean,sd)(((x-mean)/sd)/sqrt(length(X))))
 ```
 
 # Question 5a
@@ -105,18 +102,8 @@ U = list(10,15,"mary",22,32,"james",42)
 map(U, safely(~ .x + 15))
 ```
 
-The function `safely()` is used to test the execution of an operation on an object. It returns 
-two output for every execution - Result and Error. If an operational execution will be successful,
-it returns the success value in Result and NULL in Error. If the execution will be unsuccessful,
-it returns NULL in Result and the error message in Error. In our execution, the test the addidion 
-of 15 to each element in our list V. From the safely() output, we see that all V elements that are
-numeric has the + 15 value as Result and Error NULL. This shows that for those elements, the 
-execution is successful. However, for the character elements in V, we have an output of Result Null 
-and Error <simpleError in .x + 15: non-numeric argument to binary operator>, indicating an 
-unsuccessful execution.
+The function `safely()` is used to test the execution of an operation on an object. It returns two output for every execution - Result and Error. If an operational execution will be successful,it returns the success value in Result and NULL in Error. If the execution will be unsuccessful,it returns NULL in Result and the error message in Error.
 
-
-
-Credit to https://www.geeksforgeeks.org/how-to-convert-a-list-to-a-dataframe-in-r/ for reference. 
-
+In our execution, we test the addition of 15 to each element in our list V. From the safely() output, we see that all V elements that are numeric has the + 15 value as Result and Error NULL. This shows that for those elements, the 
+execution is successful. However, for the character elements in V, we have an output of Result Null and Error <simpleError in .x + 15: non-numeric argument to binary operator>, indicating an unsuccessful execution.
 
