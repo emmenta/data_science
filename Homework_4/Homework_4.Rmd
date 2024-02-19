@@ -57,7 +57,7 @@ rnorms_list <- list(negative_10 = c(rnorm(n = 10, mean = -10)),
 
 
 rnorms_tibble <- as_tibble(rnorms_list)
-View(rnorms_tibble)
+print(rnorms_tibble)
 ```
 
 Second tibble:
@@ -71,7 +71,7 @@ rnorms_list <- list(negative_10 = c(rnorm(n = 10, mean = -10)),
 
 
 rnorms_tibble <- as_tibble(rnorms_list)
-View(rnorms_tibble)
+print(rnorms_tibble)
 ```
 
 # Question 4a
