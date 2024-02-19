@@ -104,6 +104,5 @@ map(U, safely(~ .x + 15))
 
 The function `safely()` is used to test the execution of an operation on an object. It returns two output for every execution - Result and Error. If an operational execution will be successful,it returns the success value in Result and NULL in Error. If the execution will be unsuccessful,it returns NULL in Result and the error message in Error.
 
-In our execution, we test the addition of 15 to each element in our list V. From the safely() output, we see that all V elements that are numeric has the + 15 value as Result and Error NULL. This shows that for those elements, the 
-execution is successful. However, for the character elements in V, we have an output of Result Null and Error <simpleError in .x + 15: non-numeric argument to binary operator>, indicating an unsuccessful execution.
+In our execution, we test the addition of 15 to each element in our list V. From the safely() output, we see that all V elements that are numeric has the + 15 value as Result and Error NULL. This shows that for those elements, the execution is successful. However, for the character elements in V, we have an output of Result Null and Error <simpleError in .x + 15: non-numeric argument to binary operator>, indicating an unsuccessful execution.
 
